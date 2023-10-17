@@ -1,15 +1,20 @@
-Source: template-repository
-Section: unknown
+Source: zope.exceptions
+Section: zope
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               python3-zope.interface,
+               python3-zope.testrunner,
+Standards-Version: 4.6.1
+Rules-Requires-Root: no
+Homepage: https://github.com/zopefoundation/zope.exceptions
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-zope.exceptions
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Zope exceptions for Python 3
+ This package contains exception interfaces and implementations which are so
+ general purpose that they don't belong in Zope application-specific packages.

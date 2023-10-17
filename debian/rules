@@ -1,4 +1,12 @@
 #!/usr/bin/make -f
 
+
+export PYBUILD_NAME=zope.exceptions
+
+
 %:
-	dh $@
+	dh $@ --with python3 --buildsystem=pybuild
+
+
+override_dh_auto_test:
+	PYBUILD_SYSTEM=custom PYBUILD_TEST_ARGS="{interpreter} -m zope.testrunner --test-path=src --verbose --progress --color" dh_auto_test

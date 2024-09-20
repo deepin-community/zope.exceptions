@@ -1,5 +1,262 @@
-template-repository (1.0-1) unstable; urgency=medium
+zope.exceptions (5.1-1) unstable; urgency=medium
 
-  * Initial release
+  * Adopt package for the Debian Python Team (closes: #948808).
+  * New upstream release.
+  * Apply X-Style: black.
+  * Use pybuild-plugin-pyproject.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Colin Watson <cjwatson@debian.org>  Mon, 09 Sep 2024 16:12:06 +0100
+
+zope.exceptions (5.0.1-2) unstable; urgency=medium
+
+  * QA upload.
+
+  * Added d/gbp.conf to describe branch layout.
+  * Updated vcs in d/control to Salsa.
+  * Updated d/gbp.conf to enforce the use of pristine-tar.
+  * Updated Standards-Version from 4.6.1 to 4.7.0.
+  * Use wrap-and-sort -at for debian control files.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 17 Jun 2024 07:43:46 +0200
+
+zope.exceptions (5.0.1-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 05 Dec 2023 16:21:40 +0100
+
+zope.exceptions (4.6-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream release
+    - Supports Python 3.11. Closes: #1025197
+
+ -- Håvard F. Aasen <havard.f.aasen@pfft.no>  Thu, 01 Dec 2022 18:41:43 +0100
+
+zope.exceptions (4.5-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream release.
+    Release supports Python 3.10 Closes: #1002360
+  * autopkgtest: Change test to use upstream unittests. Closes: #974510
+  * Remove override of installing upstream changelog, included anyway.
+  * Drop d/compat, use debhelper-compat instead.
+  * d/watch:
+    - Bump to version 4.
+    - Use secure URI.
+  * d/control:
+    - Update to Standards-Version 4.6.1
+    - Bump to debhelper 13
+    - Change homepage, point to GitHub.
+    - Remove unnecessary XS-Testsuite field.
+    - Document Rules-requires-Root.
+    - Change priority, extra -> optional.
+  * d/copyright:
+    - Change to secure URI.
+    - Update source field.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository
+    and Repository-Browse.
+
+ -- Håvard F. Aasen <havard.f.aasen@pfft.no>  Sat, 25 Jun 2022 08:43:55 +0200
+
+zope.exceptions (4.4-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version.
+  * Bump debhelper and standards versions.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 15 Oct 2020 14:39:33 +0200
+
+zope.exceptions (4.3-2) unstable; urgency=medium
+
+  * QA upload.
+  * Remove the Python2 autopkg test.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 07 Sep 2019 06:47:51 +0200
+
+zope.exceptions (4.3-1) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package. Closes: #869460.
+  * New upstream version.
+  * Stop building the Python2 package. Closes: #938905.
+  * Fix lintian warnings.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 06 Sep 2019 09:39:32 +0200
+
+zope.exceptions (4.0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/copyright: Remove Files-Excluded header after upstream fixed their
+    tarball to not include docs/_build artifacts.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 22 Sep 2015 11:34:28 -0400
+
+zope.exceptions (4.0.7-2) unstable; urgency=medium
+
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/watch: Use the pypi.debian.net redirector.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 09 Jun 2015 11:18:03 -0400
+
+zope.exceptions (4.0.7-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Gediminas Paulauskas ]
+  * debian/rules: remove setuptools from requires.txt of python3 egg.
+
+  [ Barry Warsaw ]
+  * New upstream release.
+  * d/control:
+    - Added myself to Uploaders.
+    - Updated Build-Depends.
+    - Bumped Standards-Version with no other changes necessary.
+    - Removed python-zope and python3-zope virtual dependencies.
+    - wrap-and-sort
+  * d/compat: Bumped to version 9.
+  * d/rules: Convert to --buildsystem=pybuild
+  * d/tests: Just make sure imports work.
+  * d/copyright:
+    - Fixed Format header.
+    - Added Files-Excluded header to prune pre-built docs/_build directory
+
+ -- Barry Warsaw <barry@debian.org>  Wed, 02 Jul 2014 18:37:30 -0400
+
+zope.exceptions (4.0.6-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Arnaud Fontaine ]
+  * debian/control:
+    - Use canonical URI for Vcs-Svn.
+  * debian/rules:
+    - CHANGES.txt was renamed to CHANGES.rst.
+    - setuptools is not in requires.txt so drop workaround (#688840).
+
+  [ Gediminas Paulauskas ]
+  * New upstream release.
+  * debian/control:
+    - remove Build-Depends on python3-zope.fixers, not needed since 4.0
+    - bump Standards-Version to 3.9.4
+    - enable autopkgtest. (Closes: #692696)
+    - Bump X-Python-Version to 2.6 and X-Python3-Version to 3.2
+  * debian/copyright: convert to copyright-format 1.0
+  * debian/tests/control: remove Features, none exist.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Tue, 11 Jun 2013 15:02:05 +0900
+
+zope.exceptions (3.6.1-3) unstable; urgency=low
+
+  * Team upload.
+  * debian/rules:
+    + Make sure that building fails if any python command fails.
+    + Remove setuptools from requires.txt for Python3 only as dh_python2
+      already take care of that. Closes: #688840.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Wed, 26 Sep 2012 15:27:35 +0900
+
+zope.exceptions (3.6.1-2) unstable; urgency=low
+
+  * Team upload.
+  * debian/control:
+    + Add zope.fixers to Build-Depends (needed for Python 3 only).
+      Closes: #628248.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Mon, 30 May 2011 15:41:14 +0900
+
+zope.exceptions (3.6.1-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Arnaud Fontaine ]
+  * debian/control:
+    + Add Vcs-Browser and rename XS-Vcs-Svn to Vcs-Svn (now supported by dpkg).
+    + Bump Standards-Version to 3.9.2. No changes needed.
+    + Add Homepage field.
+    + Bump python-all version required for dh_python2.
+    + Build-Depends on debhelper >= 7.0.50~ because of "override_dh_".
+  * Switch to 3.0 (quilt) source format.
+
+  [ Brian Sutherland ]
+  * Build for python3 as well.
+  * Use dh_python2/3 rather than python-central (Closes: #617167)
+  * Stop using python-van.pydeb as it doesn't work with python3 yet.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Mon, 16 May 2011 21:12:06 +0900
+
+zope.exceptions (3.6.1-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+  * debian/control: build-depend on python-all, not python-all-dev.
+
+ -- Gediminas Paulauskas <menesis@pov.lt>  Wed, 23 Feb 2011 20:05:28 +0200
+
+zope.exceptions (3.5.2-6) unstable; urgency=low
+
+  [ Brian Sutherland ]
+  * debian/tests/control: depend on python-zope.testing
+
+  [ Fabio Tranchitella ]
+  * Convert to debhelper 7 and the pydeb dh7 extension.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Wed, 30 Dec 2009 22:29:45 +0100
+
+zope.exceptions (3.5.2-5) unstable; urgency=low
+
+  * debian/control: build-depend on python-van.pydeb >= 1.3.0-2.
+    (Closes: #552940)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Mon, 14 Sep 2009 14:56:24 +0200
+
+zope.exceptions (3.5.2-4) unstable; urgency=low
+
+   * Rebuild against van.pydeb 1.3.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 22 Sep 2009 09:53:16 +0200
+
+zope.exceptions (3.5.2-3) unstable; urgency=low
+
+  * debian/rules: do not depend on zope.testing to avoid circular dependencies.
+    (Closes: #545860)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Mon, 14 Sep 2009 14:53:50 +0200
+
+zope.exceptions (3.5.2-2) unstable; urgency=low
+
+  * Set section to zope.
+  * Rebuild against van.pydeb 1.3.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 13 Sep 2009 09:45:07 +0200
+
+zope.exceptions (3.5.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Add watch file
+  * Change source package name
+  * Standards-Version 3.8.1
+  * Python-Version all
+  * Build with the newer python-van.pydeb rather than python-
+    vanguardistas.pydebdep
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Mon, 25 May 2009 22:34:30 +0200
+
+python-zope.exceptions (3.4.0-1ubuntu1.1) etch-devel; urgency=low
+
+  * Non-maintainer upload.
+  * Rebuild for etch-devel
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Wed, 23 Jul 2008 09:38:23 +0200
+
+python-zope.exceptions (3.4.0-1ubuntu1) hardy; urgency=low
+
+  * Re-build for hardy
+
+ -- Ignas Mikalajunas <ignas.mikalajunas@gmail.com>  Wed, 23 Apr 2008 11:19:05 +0300
+
+python-zope.exceptions (3.4.0-1) gutsy; urgency=low
+
+  * Inital Release
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Thu,  8 Nov 2007 19:27:48 +0100

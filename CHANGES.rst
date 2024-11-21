@@ -2,12 +2,20 @@
  zope.exceptions Changelog
 ===========================
 
+5.2 (2024-10-30)
+================
+
+- Drop support for Python 3.7.
+
+- Add support for Python 3.13.
+
+
 5.1 (2024-06-07)
 ================
 
 - Add support for Python 3.12.
 
-- Include code from PEP302 loaders in tracebacks
+- Include code from PEP302 loaders in tracebacks.
 
 
 5.0.1 (2023-07-11)

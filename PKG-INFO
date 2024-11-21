@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: zope.exceptions
-Version: 5.1
+Version: 5.2
 Summary: Zope Exceptions
 Home-page: https://github.com/zopefoundation/zope.exceptions
 Author: Zope Foundation and Contributors
@@ -15,19 +15,19 @@ Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: Zope Public License
 Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
 Classifier: Programming Language :: Python :: Implementation :: CPython
 Classifier: Programming Language :: Python :: Implementation :: PyPy
 Classifier: Natural Language :: English
 Classifier: Operating System :: OS Independent
 Classifier: Topic :: Internet :: WWW/HTTP
 Classifier: Framework :: Zope :: 3
-Requires-Python: >=3.7
+Requires-Python: >=3.8
 License-File: LICENSE.txt
 Requires-Dist: setuptools
 Requires-Dist: zope.interface
@@ -69,12 +69,20 @@ Please see https://zopeexceptions.readthedocs.io/ for the documentation.
  zope.exceptions Changelog
 ===========================
 
+5.2 (2024-10-30)
+================
+
+- Drop support for Python 3.7.
+
+- Add support for Python 3.13.
+
+
 5.1 (2024-06-07)
 ================
 
 - Add support for Python 3.12.
 
-- Include code from PEP302 loaders in tracebacks
+- Include code from PEP302 loaders in tracebacks.
 
 
 5.0.1 (2023-07-11)

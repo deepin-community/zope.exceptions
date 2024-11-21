@@ -1,3 +1,19 @@
+zope.exceptions (5.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 30 Oct 2024 07:55:46 +0000
+
+zope.exceptions (5.1-2) unstable; urgency=medium
+
+  * Cherry-pick upstream patch to add support for Python 3.13 (closes:
+    #1082339).
+  * Run tests against the built version, not one installed via
+    build-dependencies.
+  * Switch to autopkgtest-pkg-pybuild.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 09 Oct 2024 12:00:15 +0100
+
 zope.exceptions (5.1-1) unstable; urgency=medium
 
   * Adopt package for the Debian Python Team (closes: #948808).
